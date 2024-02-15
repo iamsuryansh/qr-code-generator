@@ -37,9 +37,9 @@ const QRCodeGenerator = () => {
             <div className={`translate-opacity duration-500 delay-250 ${showQRCode ? "opacity-1" : "opacity-0 "}`}>
                 <QRCode id="qr-code-value" value={qrCode} size={400} bgColor="#fff" />
             </div>
-            <div className="text-center w-2/5 text-white py-10 text-2xl">
+            {showQRCode && <div className="text-center w-2/5 text-white py-10 text-2xl">
                 QR Code generated for - {qrCode}
-            </div>
+            </div>}
         </div>
     );
 };
